@@ -1,5 +1,5 @@
-export { default } from "../page";
+import { redirect } from "next/navigation";
 
-export const metadata = {
-  title: "Home | Nader Bahsoun",
-};
+export default function HomeAlias() {
+  redirect("/");
+}
