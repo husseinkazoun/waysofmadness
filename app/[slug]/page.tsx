@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { projectPages } from "@/lib/content";
 import { pageImages } from "@/lib/page-images";
 import { pageCopy } from "@/lib/page-copy";
+import { pageVideos } from "@/lib/page-videos";
 
 type Params = { slug: string };
 const siteUrl = "https://www.naderbahsounstudios.com";
@@ -54,6 +55,7 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
   if (!entry) return notFound();
   const images = pageImages[slug] ?? [];
   const copy = pageCopy[slug];
+  const videos = pageVideos[slug] ?? [];
 
   return (
     <div className="min-h-screen px-[6vw] py-20 md:px-[4vw]">
@@ -64,11 +66,41 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
             {entry.title}
           </h1>
           {copy && (
-            <div className="text-lg leading-relaxed text-zinc-300">
+            <div className="text-lg leading-relaxed text-zinc-300 whitespace-pre-line">
               {copy}
             </div>
           )}
         </div>
+
+        {/* Video Embeds */}
+        {videos.length > 0 && (
+          <div className="space-y-6">
+            {videos.map((video, idx) => (
+              <div key={idx} className="relative aspect-video w-full overflow-hidden bg-zinc-900">
+                {video.type === "vimeo" && (
+                  <iframe
+                    src={`https://player.vimeo.com/video/${video.id}`}
+                    title={video.title || `Video ${idx + 1}`}
+                    className="absolute inset-0 h-full w-full"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                    allowFullScreen
+                  />
+                )}
+                {video.type === "youtube" && (
+                  <iframe
+                    src={`https://www.youtube.com/embed/${video.id}`}
+                    title={video.title || `Video ${idx + 1}`}
+                    className="absolute inset-0 h-full w-full"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                )}
+              </div>
+            ))}
+          </div>
+        )}
 
         {/* Images Gallery */}
         {images.length > 0 ? (
@@ -104,11 +136,11 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
               );
             })}
           </div>
-        ) : (
+        ) : videos.length === 0 ? (
           <div className="py-12 text-center text-zinc-500">
-            No images available for this project
+            No media available for this project
           </div>
-        )}
+        ) : null}
       </div>
     </div>
   );
