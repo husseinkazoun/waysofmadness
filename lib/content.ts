@@ -61,29 +61,4 @@ export const projectPages: SimplePage[] = [
   { slug: "zoukak-theatre", title: "Zoukak Theatre" },
 ];
 
-export const xprintSlugs = [
-  "q6z3htei50m2ixozdceoi4iz27tdvk",
-  "q6z3htei50m2ixozdceoi4iz27tdvk-t9pb7",
-  "q6z3htei50m2ixozdceoi4iz27tdvk-t9pb7-amby8",
-  "q6z3htei50m2ixozdceoi4iz27tdvk-t9pb7-amby8-28r7n",
-  "q6z3htei50m2ixozdceoi4iz27tdvk-t9pb7-amby8-28r7n-s2229",
-  "q6z3htei50m2ixozdceoi4iz27tdvk-t9pb7-amby8-28r7n-s2229-txt4b",
-  "q6z3htei50m2ixozdceoi4iz27tdvk-t9pb7-amby8-28r7n-s2229-txt4b-wbyrf",
-  "q6z3htei50m2ixozdceoi4iz27tdvk-t9pb7-amby8-28r7n-s2229-txt4b-wbyrf-yn6w2",
-  "q6z3htei50m2ixozdceoi4iz27tdvk-t9pb7-amby8-28r7n-s2229-txt4b-wbyrf-yn6w2-esrlj",
-  "q6z3htei50m2ixozdceoi4iz27tdvk-t9pb7-amby8-28r7n-s2229-txt4b-wbyrf-yn6w2-esrlj-2fek5",
-  "q6z3htei50m2ixozdceoi4iz27tdvk-t9pb7-amby8-28r7n-s2229-txt4b-wbyrf-yn6w2-esrlj-2fek5-5f7rt",
-  "q6z3htei50m2ixozdceoi4iz27tdvk-t9pb7-amby8-28r7n-s2229-txt4b-wbyrf-yn6w2-esrlj-2fek5-5f7rt-hcw6e",
-  "q6z3htei50m2ixozdceoi4iz27tdvk-t9pb7-amby8-28r7n-s2229-txt4b-wbyrf-yn6w2-esrlj-2fek5-5f7rt-hcw6e-ptast",
-  "q6z3htei50m2ixozdceoi4iz27tdvk-t9pb7-amby8-28r7n-s2229-txt4b-wbyrf-yn6w2-esrlj-2fek5-5f7rt-hcw6e-ptast-2ytad",
-  "q6z3htei50m2ixozdceoi4iz27tdvk-t9pb7-amby8-28r7n-s2229-txt4b-wbyrf-yn6w2-esrlj-2fek5-5f7rt-hcw6e-ptast-2ytad-t2c3x",
-  "q6z3htei50m2ixozdceoi4iz27tdvk-t9pb7-amby8-28r7n-s2229-txt4b-wbyrf-yn6w2-esrlj-2fek5-5f7rt-hcw6e-ptast-2ytad-t2c3x-c95tt",
-  "q6z3htei50m2ixozdceoi4iz27tdvk-t9pb7-amby8-28r7n-s2229-txt4b-wbyrf-yn6w2-esrlj-2fek5-5f7rt-hcw6e-ptast-2ytad-t2c3x-c95tt-5xw7p",
-  "q6z3htei50m2ixozdceoi4iz27tdvk-t9pb7-amby8-28r7n-s2229-txt4b-wbyrf-yn6w2-esrlj-2fek5-5f7rt-hcw6e-ptast-2ytad-t2c3x-c95tt-5xw7p-s99ek",
-  "q6z3htei50m2ixozdceoi4iz27tdvk-t9pb7-amby8-28r7n-s2229-txt4b-wbyrf-yn6w2-esrlj-2fek5-5f7rt-hcw6e-ptast-2ytad-t2c3x-c95tt-5xw7p-s99ek-mbngn",
-  "q6z3htei50m2ixozdceoi4iz27tdvk-t9pb7-amby8-28r7n-s2229-txt4b-wbyrf-yn6w2-esrlj-2fek5-5f7rt-hcw6e-ptast-2ytad-t2c3x-c95tt-5xw7p-s99ek-mbngn-agbfh",
-  "q6z3htei50m2ixozdceoi4iz27tdvk-t9pb7-amby8-28r7n-s2229-txt4b-wbyrf-yn6w2-esrlj-2fek5-5f7rt-hcw6e-ptast-2ytad-t2c3x-c95tt-5xw7p-s99ek-mbngn-agbfh-arpac",
-  "q6z3htei50m2ixozdceoi4iz27tdvk-t9pb7-amby8-28r7n-s2229-txt4b-wbyrf-yn6w2-esrlj-2fek5-5f7rt-hcw6e-ptast-2ytad-t2c3x-c95tt-5xw7p-s99ek-mbngn-agbfh-arpac-8sn2g",
-  "q6z3htei50m2ixozdceoi4iz27tdvk-t9pb7-amby8-28r7n-s2229-txt4b-wbyrf-yn6w2-esrlj-2fek5-5f7rt-hcw6e-ptast-2ytad-t2c3x-c95tt-5xw7p-s99ek-mbngn-agbfh-arpac-8sn2g-nsexj",
-  "q6z3htei50m2ixozdceoi4iz27tdvk-t9pb7-amby8-28r7n-s2229-txt4b-wbyrf-yn6w2-esrlj-2fek5-5f7rt-hcw6e-ptast-2ytad-t2c3x-c95tt-5xw7p-s99ek-mbngn-agbfh-arpac-8sn2g-nsexj-6jsmk",
-];
+// Store products are now defined in lib/store-products.ts

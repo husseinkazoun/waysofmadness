@@ -1,5 +1,5 @@
 export const pageCopy: Record<string, string> = {
-  "archive-x": "TODO: archive-x copy (source protected, fetch manually).",
+  "archive-x": "ARCHIVE X\n\nArchive X investigates how images survive destruction and how memory reorganises itself through what remains. The project began with family photographs discovered in debris after my home was lost in South Lebanon.\n\nWorking across photography, video, sound, and installation, Archive X explores the moment between finding and understanding, between image and un-image—the transformation that occurs through damage and rupture.\n\nKonvent Zero Residency (2025): A two-week research period in Cal Rosal, Spain focused on material experimentation including emulsion transfer processes and spatial installation techniques.",
   "a-la-recherche-de-beyrouth":
     "À la recherche de Beyrouth Photography Series | Commissioned by Galerie Claude Lemand | Exhibited at Institut du Monde Arabe, Paris (2021) À la recherche de Beyrouth is a photographic series commissioned by Galerie Claude Lemand (Paris) and exhibited as part of the group show Lumières du Liban at the Institut du Monde Arabe (IMA) in 2021. The exhibition brought together contemporary Lebanese artis",
   "alternative-beirut":

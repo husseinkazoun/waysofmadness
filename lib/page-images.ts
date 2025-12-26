@@ -2,7 +2,11 @@
 // Remote domains are allowed in next.config.ts.
 export const pageImages: Record<string, string[]> = {
   "archive-x": [
-    // TODO: add archive-x images (Squarespace protected)
+    "https://images.squarespace-cdn.com/content/v1/653146cbbf386b36d5f26d0e/3d654269-5fac-4872-91f4-b95adbca9104/Archive+X-22+copy.jpg",
+    "https://images.squarespace-cdn.com/content/v1/653146cbbf386b36d5f26d0e/f4296e5c-3150-4781-87f3-5500c885c66a/Nader_Konvent2025-01.jpg",
+    "https://images.squarespace-cdn.com/content/v1/653146cbbf386b36d5f26d0e/8e3ff95b-535d-41b8-baf3-90479a3a0d3d/Nader_Konvent2025-06.jpg",
+    "https://images.squarespace-cdn.com/content/v1/653146cbbf386b36d5f26d0e/6453671f-e5c2-45ff-8c3d-a806e5dce554/Nader_Konvent2025-08.jpg",
+    "https://images.squarespace-cdn.com/content/v1/653146cbbf386b36d5f26d0e/bc967fb3-d2ce-442e-84f1-88d2c56e867b/DSC04752.jpg",
   ],
   "about": [
     "https://images.squarespace-cdn.com/content/v1/653146cbbf386b36d5f26d0e/267976e8-3898-4938-be65-587856514999/IMG-20221101-WA0063%281%29-gigapixel-standard-scale-2_00x+copy.jpg",

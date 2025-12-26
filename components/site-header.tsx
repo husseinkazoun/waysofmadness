@@ -101,7 +101,7 @@ export function SiteHeader() {
             Contact
           </Link>
           <a
-            href="https://instagram.com/naderbahsoun"
+            href="https://instagram.com/waysoffmadness"
             target="_blank"
             rel="noopener noreferrer"
             className="transition hover:text-white"
@@ -183,7 +183,7 @@ export function SiteHeader() {
               Contact
             </Link>
             <a
-              href="https://instagram.com/naderbahsoun"
+              href="https://instagram.com/waysoffmadness"
               target="_blank"
               rel="noopener noreferrer"
               className="transition hover:text-white"
