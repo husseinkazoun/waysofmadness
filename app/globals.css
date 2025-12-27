@@ -18,3 +18,8 @@ main .sections:first-child .page-section:first-child {
   color: inherit !important;
 }
 
+/* Override Squarespace's lazy-loading display:none on images */
+img.grid-item-image {
+  display: block !important;
+}
+

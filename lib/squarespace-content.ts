@@ -16,11 +16,6 @@ const STATIC_PAGE_NAMES = new Set([
 
 function processSquarespaceHtml(html: string): string {
   return html
-    // Remove display:none from inline style attributes only (not from <style> tags)
-    // Match style="...display:none..." and remove just the display:none part
-    .replace(/(style="[^"]*?)display:\s*none;?\s*/gi, "$1")
-    // Remove empty style attributes that may result
-    .replace(/style="\s*"/gi, "")
     // Remove Squarespace's custom loader attribute that blocks native loading
     .replace(/\s*data-loader="sqs"/gi, "")
     // Remove data-load="false" that prevents loading
