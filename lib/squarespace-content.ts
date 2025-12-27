@@ -16,14 +16,16 @@ const STATIC_PAGE_NAMES = new Set([
 
 function processSquarespaceHtml(html: string): string {
   return html
-    // Remove display:none from images (Squarespace hides them for their JS loader)
-    .replace(/(<img[^>]*style="[^"]*?)display:\s*none;?/gi, "$1")
-    // Remove empty style attributes
+    // Remove ALL display:none from style attributes (Squarespace hides elements for their JS loader)
+    .replace(/display:\s*none;?\s*/gi, "")
+    // Remove empty style attributes that may result
     .replace(/style="\s*"/gi, "")
     // Remove Squarespace's custom loader attribute that blocks native loading
     .replace(/\s*data-loader="sqs"/gi, "")
     // Remove data-load="false" that prevents loading
-    .replace(/\s*data-load="false"/gi, "");
+    .replace(/\s*data-load="false"/gi, "")
+    // Remove sizes="0" which prevents images from loading
+    .replace(/\s*sizes="0"/gi, "");
 }
 
 export async function loadSquarespaceHtml(name: string): Promise<string | null> {

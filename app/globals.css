@@ -13,3 +13,8 @@ main .sections:first-child .page-section:first-child {
   padding-top: var(--header-fixed-top-offset, 100px);
 }
 
+/* Fix white text that's invisible on light backgrounds */
+.sqsrte-text-color--white {
+  color: inherit !important;
+}
+
