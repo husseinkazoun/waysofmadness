@@ -22,7 +22,7 @@ export function SiteHeader() {
     { slug: "snakes-and-ladders", title: "Snakes and Ladders" },
     { slug: "msafreen", title: "Mehrak" },
     { slug: "jal-el-bahr", title: "Jal El Bahr" },
-    { slug: "unhearable-voices", title: "Unhearable Voices" },
+    { slug: "unhearable-voices", title: "Unhearable voices" },
   ];
 
   const projectPaths = projectsSubmenu.map((item) => `/${item.slug}`);
@@ -44,25 +44,26 @@ export function SiteHeader() {
     };
   }, [mobileMenuOpen]);
 
+  const navLinkClass = (active: boolean) =>
+    `text-sm transition ${active ? "!text-black" : "!text-black/70 hover:!text-black"}`;
+
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-black/70 backdrop-blur-[12px]">
+    <header className="fixed top-0 z-50 w-full border-b border-black/10 !bg-white">
       <div className="flex items-center justify-between px-[6vw] py-4 md:px-[4vw]">
         <Link
           href="/"
-          className="font-display text-sm font-medium tracking-wide text-white transition hover:text-zinc-300"
+          className="font-display text-sm font-medium tracking-wide !text-black"
         >
           Nader Bahsoun
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden items-center gap-6 text-sm md:flex">
+        <div className="hidden items-center gap-6 md:flex">
           <nav className="flex items-center gap-6">
             <Link
               href="/"
               aria-current={isActive("/") ? "page" : undefined}
-              className={`transition hover:text-white ${
-                isActive("/") ? "text-white" : "text-zinc-400"
-              }`}
+              className={navLinkClass(isActive("/"))}
             >
               Home
             </Link>
@@ -74,22 +75,24 @@ export function SiteHeader() {
               onMouseLeave={() => setHoveredMenu(null)}
             >
               <button
-                className={`transition hover:text-white ${
-                  isProjectsActive ? "text-white" : "text-zinc-400"
-                }`}
+                className={navLinkClass(isProjectsActive)}
+                aria-expanded={hoveredMenu === "projects"}
+                aria-controls="projects-menu"
               >
                 Projects
               </button>
               {hoveredMenu === "projects" && (
-                <div className="absolute left-0 top-full pt-2">
-                  <div className="w-56 border border-white/10 bg-black/90 backdrop-blur-[12px] py-2 shadow-xl">
+                <div className="absolute left-0 top-full pt-2" id="projects-menu">
+                  <div className="w-60 border border-black/10 !bg-white py-2 shadow-lg">
                     {projectsSubmenu.map((item) => (
                       <Link
                         key={item.slug}
                         href={`/${item.slug}`}
                         aria-current={isActive(`/${item.slug}`) ? "page" : undefined}
-                        className={`block px-4 py-2 text-sm transition hover:bg-white/5 hover:text-white ${
-                          isActive(`/${item.slug}`) ? "text-white" : "text-zinc-400"
+                        className={`block px-4 py-2 text-sm transition hover:bg-black/5 ${
+                          isActive(`/${item.slug}`)
+                            ? "!text-black"
+                            : "!text-black/70 hover:!text-black"
                         }`}
                       >
                         {item.title}
@@ -107,22 +110,27 @@ export function SiteHeader() {
               onMouseLeave={() => setHoveredMenu(null)}
             >
               <button
-                className={`transition hover:text-white ${
-                  isCoCreationsActive ? "text-white" : "text-zinc-400"
-                }`}
+                className={navLinkClass(isCoCreationsActive)}
+                aria-expanded={hoveredMenu === "co-creations"}
+                aria-controls="co-creations-menu"
               >
                 Co-creations
               </button>
               {hoveredMenu === "co-creations" && (
-                <div className="absolute left-0 top-full pt-2">
-                  <div className="w-56 border border-white/10 bg-black/90 backdrop-blur-[12px] py-2 shadow-xl">
+                <div
+                  className="absolute left-0 top-full pt-2"
+                  id="co-creations-menu"
+                >
+                  <div className="w-60 border border-black/10 !bg-white py-2 shadow-lg">
                     {coCreationsSubmenu.map((item) => (
                       <Link
                         key={item.slug}
                         href={`/${item.slug}`}
                         aria-current={isActive(`/${item.slug}`) ? "page" : undefined}
-                        className={`block px-4 py-2 text-sm transition hover:bg-white/5 hover:text-white ${
-                          isActive(`/${item.slug}`) ? "text-white" : "text-zinc-400"
+                        className={`block px-4 py-2 text-sm transition hover:bg-black/5 ${
+                          isActive(`/${item.slug}`)
+                            ? "!text-black"
+                            : "!text-black/70 hover:!text-black"
                         }`}
                       >
                         {item.title}
@@ -136,18 +144,14 @@ export function SiteHeader() {
             <Link
               href="/xprints"
               aria-current={isPrintsActive ? "page" : undefined}
-              className={`transition hover:text-white ${
-                isPrintsActive ? "text-white" : "text-zinc-400"
-              }`}
+              className={navLinkClass(isPrintsActive)}
             >
               Prints
             </Link>
             <Link
               href="/about"
               aria-current={isActive("/about") ? "page" : undefined}
-              className={`transition hover:text-white ${
-                isActive("/about") ? "text-white" : "text-zinc-400"
-              }`}
+              className={navLinkClass(isActive("/about"))}
             >
               About
             </Link>
@@ -158,7 +162,7 @@ export function SiteHeader() {
               href="https://instagram.com/waysoffmadness"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-zinc-400 transition hover:text-white"
+              className="!text-black/70 transition hover:!text-black"
               aria-label="Instagram"
             >
               <svg
@@ -171,7 +175,7 @@ export function SiteHeader() {
             </a>
             <Link
               href="/contact"
-              className="border border-white/40 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-white transition hover:border-white"
+              className="border border-black !bg-black px-4 py-1.5 text-xs uppercase tracking-[0.2em] !text-white transition hover:!bg-black/90"
             >
               Contact
             </Link>
@@ -181,7 +185,7 @@ export function SiteHeader() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden text-sm text-zinc-400 transition hover:text-white"
+          className="md:hidden text-sm !text-black/70 transition hover:!text-black"
           aria-label="Toggle menu"
           aria-expanded={mobileMenuOpen}
           aria-controls="mobile-menu"
@@ -198,20 +202,20 @@ export function SiteHeader() {
           aria-modal="true"
         >
           <div
-            className="absolute inset-0 bg-black/70 backdrop-blur-[6px]"
+            className="absolute inset-0 bg-black/10"
             onClick={() => setMobileMenuOpen(false)}
           />
           <nav
             id="mobile-menu"
-            className="absolute right-0 top-0 flex h-full w-[80%] max-w-xs flex-col gap-6 bg-black/95 px-6 py-8 text-sm text-zinc-400 shadow-2xl"
+            className="absolute right-0 top-0 flex h-full w-[80%] max-w-xs flex-col gap-6 !bg-white px-6 py-8 text-sm !text-black/70 shadow-2xl"
           >
             <div className="flex items-center justify-between">
-              <span className="text-xs uppercase tracking-[0.2em] text-zinc-500">
+              <span className="text-xs uppercase tracking-[0.2em] !text-black/50">
                 Menu
               </span>
               <button
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-xs uppercase tracking-[0.2em] text-zinc-400 transition hover:text-white"
+                className="text-xs uppercase tracking-[0.2em] !text-black/60 transition hover:!text-black"
               >
                 Close
               </button>
@@ -221,29 +225,23 @@ export function SiteHeader() {
               <Link
                 href="/"
                 aria-current={isActive("/") ? "page" : undefined}
-                className={`transition hover:text-white ${
-                  isActive("/") ? "text-white" : "text-zinc-400"
-                }`}
+                className={navLinkClass(isActive("/"))}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
               </Link>
               <div>
-                <span
-                  className={`block ${
-                    isProjectsActive ? "text-white" : "text-zinc-400"
-                  }`}
-                >
-                  Projects
-                </span>
+                <span className={navLinkClass(isProjectsActive)}>Projects</span>
                 <div className="ml-4 mt-2 flex flex-col gap-2">
                   {projectsSubmenu.map((item) => (
                     <Link
                       key={item.slug}
                       href={`/${item.slug}`}
                       aria-current={isActive(`/${item.slug}`) ? "page" : undefined}
-                      className={`text-xs transition hover:text-white ${
-                        isActive(`/${item.slug}`) ? "text-white" : "text-zinc-500"
+                      className={`text-xs transition ${
+                        isActive(`/${item.slug}`)
+                          ? "!text-black"
+                          : "!text-black/60 hover:!text-black"
                       }`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
@@ -253,11 +251,7 @@ export function SiteHeader() {
                 </div>
               </div>
               <div>
-                <span
-                  className={`block ${
-                    isCoCreationsActive ? "text-white" : "text-zinc-400"
-                  }`}
-                >
+                <span className={navLinkClass(isCoCreationsActive)}>
                   Co-creations
                 </span>
                 <div className="ml-4 mt-2 flex flex-col gap-2">
@@ -266,8 +260,10 @@ export function SiteHeader() {
                       key={item.slug}
                       href={`/${item.slug}`}
                       aria-current={isActive(`/${item.slug}`) ? "page" : undefined}
-                      className={`text-xs transition hover:text-white ${
-                        isActive(`/${item.slug}`) ? "text-white" : "text-zinc-500"
+                      className={`text-xs transition ${
+                        isActive(`/${item.slug}`)
+                          ? "!text-black"
+                          : "!text-black/60 hover:!text-black"
                       }`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
@@ -279,9 +275,7 @@ export function SiteHeader() {
               <Link
                 href="/xprints"
                 aria-current={isPrintsActive ? "page" : undefined}
-                className={`transition hover:text-white ${
-                  isPrintsActive ? "text-white" : "text-zinc-400"
-                }`}
+                className={navLinkClass(isPrintsActive)}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Prints
@@ -289,9 +283,7 @@ export function SiteHeader() {
               <Link
                 href="/about"
                 aria-current={isActive("/about") ? "page" : undefined}
-                className={`transition hover:text-white ${
-                  isActive("/about") ? "text-white" : "text-zinc-400"
-                }`}
+                className={navLinkClass(isActive("/about"))}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
@@ -299,9 +291,7 @@ export function SiteHeader() {
               <Link
                 href="/contact"
                 aria-current={isActive("/contact") ? "page" : undefined}
-                className={`transition hover:text-white ${
-                  isActive("/contact") ? "text-white" : "text-zinc-400"
-                }`}
+                className={navLinkClass(isActive("/contact"))}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
@@ -310,7 +300,7 @@ export function SiteHeader() {
                 href="https://instagram.com/waysoffmadness"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-zinc-400 transition hover:text-white"
+                className="!text-black/60 transition hover:!text-black"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Instagram

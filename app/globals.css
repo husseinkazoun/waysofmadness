@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000000;
 }
 
 @theme inline {
@@ -12,16 +12,9 @@
   --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: #0e0e0e;
-  color: #ededed;
+  background: #ffffff;
+  color: #000000;
   font-family: var(--font-body), "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -33,4 +26,13 @@ h5,
 h6,
 .font-display {
   font-family: var(--font-display), "Helvetica Neue", Arial, sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--sqs-site-max-width, 1500px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--sqs-site-gutter, 4vw);
+  padding-right: var(--sqs-site-gutter, 4vw);
 }

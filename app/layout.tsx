@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Epilogue, Poppins } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
 import { pageImages } from "@/lib/page-images";
+import { squarespaceBodyClass } from "@/lib/squarespace-body";
 import "./globals.css";
 
 const epilogue = Epilogue({
@@ -50,9 +51,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${poppins.variable} ${epilogue.variable}`}>
-      <body className="bg-[#0e0e0e] text-[#ededed] antialiased">
-        <SiteHeader />
-        <main>{children}</main>
+      <body className={squarespaceBodyClass}>
+        <div id="siteWrapper" className="clearfix site-wrapper">
+          <SiteHeader />
+          {children}
+        </div>
       </body>
     </html>
   );
