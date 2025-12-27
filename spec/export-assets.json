@@ -1,0 +1,88 @@
+{
+  "images": {
+    "home": [
+      "/assets/home/image-01.jpg"
+    ],
+    "about": [
+      "/assets/about/image-01.jpg"
+    ],
+    "contact": [
+      "/assets/contact/image-01.jpg",
+      "/assets/contact/image-02.jpg"
+    ],
+    "the-bleed-zine": [
+      "/assets/the-bleed-zine/image-01.jpg",
+      "/assets/the-bleed-zine/image-02.jpg",
+      "/assets/the-bleed-zine/image-03.jpg",
+      "/assets/the-bleed-zine/image-04.jpg",
+      "/assets/the-bleed-zine/image-05.jpg",
+      "/assets/the-bleed-zine/image-06.jpg",
+      "/assets/the-bleed-zine/image-07.jpg",
+      "/assets/the-bleed-zine/image-08.jpg",
+      "/assets/the-bleed-zine/image-09.jpg",
+      "/assets/the-bleed-zine/image-10.jpg",
+      "/assets/the-bleed-zine/image-11.jpg",
+      "/assets/the-bleed-zine/image-12.jpg",
+      "/assets/the-bleed-zine/image-13.jpg",
+      "/assets/the-bleed-zine/image-14.jpg",
+      "/assets/the-bleed-zine/image-15.jpg",
+      "/assets/the-bleed-zine/image-16.jpg",
+      "/assets/the-bleed-zine/image-17.jpg",
+      "/assets/the-bleed-zine/image-18.jpg",
+      "/assets/the-bleed-zine/image-19.jpg",
+      "/assets/the-bleed-zine/image-20.jpg"
+    ],
+    "jal-el-bahr": [
+      "/assets/jal-el-bahr/image-01.jpg",
+      "/assets/jal-el-bahr/image-02.jpg",
+      "/assets/jal-el-bahr/image-03.jpg",
+      "/assets/jal-el-bahr/image-04.jpg",
+      "/assets/jal-el-bahr/image-05.jpg",
+      "/assets/jal-el-bahr/image-06.jpg",
+      "/assets/jal-el-bahr/image-07.jpg",
+      "/assets/jal-el-bahr/image-08.jpg"
+    ],
+    "three-decades-and-a-climax": [
+      "/assets/three-decades-and-a-climax/image-01.jpg",
+      "/assets/three-decades-and-a-climax/image-02.jpg",
+      "/assets/three-decades-and-a-climax/image-03.jpg",
+      "/assets/three-decades-and-a-climax/image-04.jpg",
+      "/assets/three-decades-and-a-climax/image-05.jpg",
+      "/assets/three-decades-and-a-climax/image-06.jpg",
+      "/assets/three-decades-and-a-climax/image-07.jpg",
+      "/assets/three-decades-and-a-climax/image-08.jpg",
+      "/assets/three-decades-and-a-climax/image-09.jpg",
+      "/assets/three-decades-and-a-climax/image-10.jpg",
+      "/assets/three-decades-and-a-climax/image-11.jpg",
+      "/assets/three-decades-and-a-climax/image-12.jpg",
+      "/assets/three-decades-and-a-climax/image-13.jpg",
+      "/assets/three-decades-and-a-climax/image-14.jpg"
+    ],
+    "unhearable-voices": [
+      "/assets/unhearable-voices/image-01.png",
+      "/assets/unhearable-voices/image-02.png",
+      "/assets/unhearable-voices/image-03.png",
+      "/assets/unhearable-voices/image-04.png"
+    ],
+    "msafreen": [
+      "/assets/msafreen/image-01.png",
+      "/assets/msafreen/image-02.png",
+      "/assets/msafreen/image-03.png",
+      "/assets/msafreen/image-04.png",
+      "/assets/msafreen/image-05.png",
+      "/assets/msafreen/image-06.png",
+      "/assets/msafreen/image-07.png",
+      "/assets/msafreen/image-08.png"
+    ],
+    "i-was-naver": [
+      "/assets/i-was-naver/image-01.jpg",
+      "/assets/i-was-naver/image-02.jpg"
+    ]
+  },
+  "missing": {
+    "i-was-naver": [
+      "/Users/husseinkazoun/naderbahsoun_export/images.squarespace-cdn.com/content/v1/653146cbbf386b36d5f26d0e/6e97d9b5-884d-434c-9fe1-a587b1fbe0cb/IMG_8607.jpeg",
+      "/Users/husseinkazoun/naderbahsoun_export/images.squarespace-cdn.com/content/v1/653146cbbf386b36d5f26d0e/8d6ae48b-d777-4f68-a1c9-3aaec85350db/IMG_8606.jpeg"
+    ]
+  }
+}
