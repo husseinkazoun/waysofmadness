@@ -9,3 +9,7 @@
   margin: 0;
   padding: 0;
 }
+main .sections:first-child .page-section:first-child {
+  padding-top: var(--header-fixed-top-offset, 100px);
+}
+

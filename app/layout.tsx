@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Epilogue, Poppins } from "next/font/google";
 import { SquarespaceHeader } from "@/components/squarespace-header";
+import { HeaderOffset } from "@/components/header-offset";
 import { pageImages } from "@/lib/page-images";
 import { squarespaceBodyClass } from "@/lib/squarespace-body";
 import "./globals.css";
@@ -54,6 +55,7 @@ export default function RootLayout({
       <body className={squarespaceBodyClass}>
         <div id="siteWrapper" className="clearfix site-wrapper">
           <SquarespaceHeader />
+          <HeaderOffset />
           {children}
         </div>
       </body>
