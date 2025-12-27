@@ -14,10 +14,23 @@ const STATIC_PAGE_NAMES = new Set([
   "icons",
 ]);
 
+function processSquarespaceHtml(html: string): string {
+  return html
+    // Remove display:none from images (Squarespace hides them for their JS loader)
+    .replace(/(<img[^>]*style="[^"]*?)display:\s*none;?/gi, "$1")
+    // Remove empty style attributes
+    .replace(/style="\s*"/gi, "")
+    // Remove Squarespace's custom loader attribute that blocks native loading
+    .replace(/\s*data-loader="sqs"/gi, "")
+    // Remove data-load="false" that prevents loading
+    .replace(/\s*data-load="false"/gi, "");
+}
+
 export async function loadSquarespaceHtml(name: string): Promise<string | null> {
   try {
     const filePath = path.join(CONTENT_DIR, `${name}.html`);
-    return await readFile(filePath, "utf8");
+    const html = await readFile(filePath, "utf8");
+    return processSquarespaceHtml(html);
   } catch {
     return null;
   }
