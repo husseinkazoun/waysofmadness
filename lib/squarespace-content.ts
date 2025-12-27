@@ -10,6 +10,8 @@ const STATIC_PAGE_NAMES = new Set([
   "co-creations",
   "xprints",
   "contact",
+  "header",
+  "icons",
 ]);
 
 export async function loadSquarespaceHtml(name: string): Promise<string | null> {
@@ -32,4 +34,12 @@ export async function listSquarespaceSlugs(): Promise<string[]> {
   } catch {
     return [];
   }
+}
+
+export async function loadSquarespaceHeader(): Promise<string | null> {
+  return loadSquarespaceHtml("header");
+}
+
+export async function loadSquarespaceIcons(): Promise<string | null> {
+  return loadSquarespaceHtml("icons");
 }

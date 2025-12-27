@@ -28,11 +28,3 @@ h6,
   font-family: var(--font-display), "Helvetica Neue", Arial, sans-serif;
 }
 
-.container {
-  width: 100%;
-  max-width: var(--sqs-site-max-width, 1500px);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--sqs-site-gutter, 4vw);
-  padding-right: var(--sqs-site-gutter, 4vw);
-}

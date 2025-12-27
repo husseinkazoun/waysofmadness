@@ -29,6 +29,9 @@ PAGES = {
 }
 
 ARTICLE_RE = re.compile(r"(<article class=\"sections\"[^>]*>.*?</article>)", re.S)
+HEADER_RE = re.compile(r"(<header[^>]*>.*?</header>)", re.S)
+ICONS_RE = re.compile(r"(<svg[^>]*data-usage=\"social-icons-svg\"[^>]*>.*?</svg>)", re.S)
+
 
 
 def fetch(url: str) -> str:
@@ -40,6 +43,27 @@ def fetch(url: str) -> str:
 def main() -> int:
     output_dir = pathlib.Path(__file__).resolve().parent.parent / "content" / "squarespace"
     output_dir.mkdir(parents=True, exist_ok=True)
+
+    try:
+        base_html = fetch(BASE_URL)
+        header_match = HEADER_RE.search(base_html)
+        icons_match = ICONS_RE.search(base_html)
+        if header_match:
+            (output_dir / "header.html").write_text(
+                header_match.group(1).strip(), encoding="utf-8"
+            )
+            print(f"Saved {output_dir / 'header.html'}")
+        else:
+            print("No <header> found for base URL")
+        if icons_match:
+            (output_dir / "icons.html").write_text(
+                icons_match.group(1).strip(), encoding="utf-8"
+            )
+            print(f"Saved {output_dir / 'icons.html'}")
+        else:
+            print("No social icons <svg> found for base URL")
+    except Exception as exc:
+        print(f"Failed to fetch base URL for header/icons: {exc}")
 
     for name, path in PAGES.items():
         url = f"{BASE_URL}{path}"
