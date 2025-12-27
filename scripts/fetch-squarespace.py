@@ -26,6 +26,7 @@ PAGES = {
     "msafreen": "/msafreen",
     "jal-el-bahr": "/jal-el-bahr",
     "unhearable-voices": "/unhearable-voices",
+    "womena-beirut": "/womena-beirut",
 }
 
 ARTICLE_RE = re.compile(r"(<article class=\"sections\"[^>]*>.*?</article>)", re.S)
